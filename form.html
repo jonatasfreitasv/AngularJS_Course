@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="form">
+<head>
+    <title>AngularJS - Course</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+</head>
+<body ng-controller="StoreController as store">
+
+        <div>
+            <div>
+                <h2>{{ store.gem.name }}</h1>
+                <h4>{{ store.gem.description }}</h4>
+                <h5>Description</h5>
+                <ul ng-repeat="desc in store.gem.descriptions">
+                    <blockquote>
+                        {{ desc.title }}
+                    </blockquote>
+                </ul>
+
+                <form ng-controller="DescriptionController as descCtrl" ng-submit="descCtrl.addDescription()">
+                    <ul>
+                        <blockquote>
+                            {{ descCtrl.description.title }}
+                        </blockquote>
+                    </ul>
+                    <h1>Form - Live View</h1>
+                    <h6>Add new description</h6>
+                    <input ng-model="descCtrl.description.title" type="text" placeholder="Digite aqui..." />
+                    <input type="submit" value="Add item" />
+                </form>
+
+                </div>
+            <br>
+        </div>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+</body>
+</html>
