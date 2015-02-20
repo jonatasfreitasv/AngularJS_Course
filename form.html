@@ -3,7 +3,13 @@
 <head>
     <title>AngularJS - Course</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <style type="text/css">
+        .ng-invalid.ng-dirty { border-color: #FA787E; }
+        .ng-valid.ng-dirty { border-color: #78FA89; }
+    </style>
+
 </head>
 <body ng-controller="StoreController as store">
 
@@ -18,7 +24,8 @@
                     </blockquote>
                 </ul>
 
-                <form ng-controller="DescriptionController as descCtrl" ng-submit="descCtrl.addDescription()">
+                <form name="descForm" ng-controller="DescriptionController as descCtrl"
+                      ng-submit="descForm.$valid && descCtrl.addDescription()" novalidate>
                     <ul>
                         <blockquote>
                             {{ descCtrl.description.title }}
@@ -26,8 +33,9 @@
                     </ul>
                     <h1>Form - Live View</h1>
                     <h6>Add new description</h6>
-                    <input ng-model="descCtrl.description.title" type="text" placeholder="Digite aqui..." />
+                    <input ng-model="descCtrl.description.title" type="text" placeholder="Digite aqui..." required/>
                     <input type="submit" value="Add item" />
+                    <h5>form is {{ descForm.$valid }}</h5>
                 </form>
 
                 </div>

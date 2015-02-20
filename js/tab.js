@@ -1,7 +1,7 @@
 /**
- *  Module
+ *  Tab
  *
- * Description
+ * Tab module
  */
 var app = angular.module('panel', []);
 

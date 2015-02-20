@@ -1,7 +1,7 @@
 /**
- *  Module
+ *  Form
  *
- * Description
+ * Form module
  */
 var app = angular.module('form', []);
 

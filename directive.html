@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+    <title>AngularJS - Course</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+</head>
+<body>
+
+    <div ng-controller="StoreController as store">
+        <div class="page-header">
+            <h1># ng-include</h1>
+        </div>
+        <div ng-repeat="product in store.products" ng-include="'directive_1_product.html'"></div>
+    </div>
+
+    <div class="page-header">
+        <h1># Custom Directive with inside controller</h1>
+    </div>
+
+    <product></product>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/product-directive.js"></script>
+</body>
+</html>

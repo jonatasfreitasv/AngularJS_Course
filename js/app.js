@@ -1,9 +1,9 @@
 /**
- *  Module
+ *  Store
  *
- * Description
+ * Store module
  */
-var app = angular.module('store', []);
+var app = angular.module('store', ['product']);
 
 var gem = {
     name: 'Gem Test',
@@ -16,14 +16,14 @@ var gems = [
     {
         name: 'Gem Test',
         price: 17.77,
-        description: '...',
+        description: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou.',
         active: false,
         images: []
     },
     {
         name: 'Gem Test',
         price: 77.17,
-        description: '...',
+        description: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou.',
         active: false,
         images: [
             "img/teste.jpg",
